@@ -22,5 +22,4 @@ None
 
 ## Known Problems, Issues, And/Or Errors in the Program
 
-Original Code was written in an older version of Visual Studio (2019), so net5.0 is out of
-support, and will not execute in Visual Studio 2022.
+None
