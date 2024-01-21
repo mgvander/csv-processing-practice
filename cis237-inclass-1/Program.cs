@@ -10,22 +10,30 @@ namespace cis237_inclass_1
     {
         static void Main(string[] args)
         {
-            // Make a new instance of the Employee class
-            Employee myEmployee = new Employee();
+            //// Make a new instance of the Employee class
+            //Employee myEmployee = new Employee();
 
-            myEmployee.FirstName = "Michael";
-            myEmployee.LastName = "VanderMyde";
-            myEmployee.WeeklySalary = 250.45m;
+            //myEmployee.FirstName = "Michael";
+            //myEmployee.LastName = "VanderMyde";
+            //myEmployee.WeeklySalary = 250.45m;
 
-            Console.WriteLine(myEmployee.ToString());
+            //Console.WriteLine(myEmployee.ToString());
 
-            myEmployee = new Employee(
-                "John",
-                "Smith",
-                298.45m
-                );
+            //myEmployee = new Employee(
+            //    "John",
+            //    "Smith",
+            //    298.45m
+            //    );
 
-            Console.WriteLine(myEmployee.ToString());
+            //Console.WriteLine(myEmployee.ToString());
+
+            /**********************************************************
+             * Everything before this line is meant just for demo
+             * purposes.
+             * *******************************************************/
+
+            // Make a new instance of the UserInterface Class.
+            UserInterface uI = new UserInterface();
 
             // Array of employees
             Employee[] employees = new Employee[10];
@@ -42,6 +50,38 @@ namespace cis237_inclass_1
             //employees[8] = new Employee();
             //employees[9] = new Employee();
 
+            // Get user input
+            int choice = uI.GetUserInput();
+
+            // While the choice selected is not 2, continue to prompt
+            // do work and prompt the user.
+            while (choice != 2)
+            {
+                if (choice == 1)
+                {
+                    // Create a string that can be concatonated to
+                    string outputString = "";
+
+                    // Convert each employee to a string and add it to
+                    // the output string
+                    foreach (Employee employee in employees)
+                    {
+                        if (employee != null)
+                        {
+                            // Concatonate to the output string
+                            outputString += employee.ToString()
+                                          + Environment.NewLine;
+
+                        }
+                    }
+                    // Use the UserInterface class to print out the
+                    uI.PrintList(outputString);
+                    
+                }
+                // Get user input
+                choice = uI.GetUserInput();
+
+            }
         }
     }
 }
