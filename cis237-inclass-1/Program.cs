@@ -51,7 +51,7 @@ namespace cis237_inclass_1
             Employee[] employees = new Employee[10];
 
             // Make a new instance of the UserInterface class.
-            UserInterface uI = new UserInterface();
+            //UserInterface uI = new UserInterface();
 
             // Path to the .csv file
             string pathToCSVFile = "../../../employees.csv";
@@ -62,10 +62,11 @@ namespace cis237_inclass_1
             // Call the ImportCSV method passing in our path to the file and the array of employees
             cSVProcessor.ImportCSV(pathToCSVFile, employees);
 
-            
+
 
             // Get user input
-            int choice = uI.GetUserInput();
+            //int choice = uI.GetUserInput();
+            int choice = StaticUserInterface.GetUserInput();
 
             // While the choice selected is not 2, continue to prompt
             // do work and prompt the user.
@@ -89,11 +90,12 @@ namespace cis237_inclass_1
                         }
                     }
                     // Use the UserInterface class to print out the
-                    uI.PrintList(outputString);
+                    //uI.PrintList(outputString);
+                    StaticUserInterface.PrintList(outputString);
                     
                 }
                 // Get user input
-                choice = uI.GetUserInput();
+                choice = StaticUserInterface.GetUserInput();
 
             }
         }
