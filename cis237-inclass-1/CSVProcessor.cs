@@ -19,7 +19,7 @@ namespace cis237_inclass_1
         /// Read in a .csv file and use the contents to populate an
         /// array of Employees.
         /// </summary>
-        /// <param name="pathToCSV"> Path to the .csv file to be read in </param>
+        /// <param name="pathToCSVFile"> Path to the .csv file to be read in </param>
         /// <param name="employees"> Array of Employees to populate </param>
         /// <returns> Whether the actions were successful or not </returns>
         public bool ImportCSV(string pathToCSVFile, Employee[] employees)
